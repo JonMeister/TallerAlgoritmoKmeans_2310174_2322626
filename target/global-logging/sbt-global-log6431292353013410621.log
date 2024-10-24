@@ -1,0 +1,8 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(cnl, Some(3674f02d-249d-4398-b2f4-2ea9e66c1b0d), Some(CommandSource(console0)))[0m
+[0m[[0m[31merror[0m] [0m[0mNot a valid command: cnl (similar: client, new)[0m
+[0m[[0m[31merror[0m] [0m[0mNot a valid project ID: cnl[0m
+[0m[[0m[31merror[0m] [0m[0mExpected ':'[0m
+[0m[[0m[31merror[0m] [0m[0mNot a valid key: cnl (similar: console, clean, run)[0m
+[0m[[0m[31merror[0m] [0m[0mcnl[0m
+[0m[[0m[31merror[0m] [0m[0m   ^[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

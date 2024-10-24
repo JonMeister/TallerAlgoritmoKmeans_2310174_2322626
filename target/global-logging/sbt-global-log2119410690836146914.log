@@ -1,0 +1,9 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(console, Some(61581ed0-6ff7-425f-ac52-86111a8d937c), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / console[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Scala sources to C:\Users\jcesc\IdeaProjects\ParallelScala\target\scala-2.13\classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mNon-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...[0m
+[0m[[0m[0minfo[0m] [0m[0mAttempting to fetch org.scala-sbt:compiler-bridge_2.13:1.10.3.[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Error compiling the sbt component 'compiler-bridge_2.13'[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 4 s, completed 21 oct 2024, 14:35:10[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

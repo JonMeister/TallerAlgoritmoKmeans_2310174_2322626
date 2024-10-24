@@ -1,0 +1,15 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(console, Some(9fed9fd3-fef3-4a06-bda2-b6ac1c4bf500), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / console[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 2 Scala sources to C:\Users\jcesc\IdeaProjects\ParallelScala\target\scala-3.3.3\classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E007] Type Mismatch Error: C:\Users\jcesc\IdeaProjects\ParallelScala\src\main\scala\kmedianas2D\package.scala:74:19 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m74 |[0m      clasificarSeq(puntos,medianas)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0mFound:    scala.collection.[1m[31mMap[0m[kmedianas2D.Punto, [1m[31mscala[0m[1m[31m.[0m[1m[31mcollection[0m[1m[31m.[0m[1m[31mSeq[0m[1m[31m[[0mkmedianas2D.Punto[1m[31m][0m][0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0mRequired: scala.collection.[1m[32mSeq[0m[[1m[32m([0mkmedianas2D.Punto, kmedianas2D.Punto[1m[32m)[0m][0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m longer explanation available when compiling with `-explain`[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 1 s, completed 21 oct 2024, 17:03:08[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

@@ -1,0 +1,8 @@
+[debug] > Exec(builds, None, None)
+[error] Not a valid command: builds (similar: iflast)
+[error] Not a valid project ID: builds
+[error] Expected ':'
+[error] Not a valid key: builds (similar: bgList)
+[error] builds
+[error]       ^
+[debug] > Exec(idea-shell, None, None)

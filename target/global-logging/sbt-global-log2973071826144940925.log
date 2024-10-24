@@ -1,0 +1,6 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(console, Some(4c793d98-7616-4e40-93fe-bea0379d203f), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / console[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 2 Scala sources to C:\Users\jcesc\IdeaProjects\ParallelScala\target\scala-3.3.3\classes ...[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 108 s (01:48), completed 22 oct 2024, 10:23:11[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
