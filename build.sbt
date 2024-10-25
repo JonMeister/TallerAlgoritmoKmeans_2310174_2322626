@@ -1,6 +1,6 @@
 ThisBuild / version := "0.1.0-SNAPSHOT"
 
-ThisBuild / scalaVersion := "3.3.3"
+ThisBuild / scalaVersion := "2.13.12" // 3.3.3
 
 lazy val root = (project in file("."))
   .settings(
@@ -13,3 +13,4 @@ libraryDependencies ++= Seq(
   "org.scala-lang.modules" %% "scala-parallel-collections" % "1.0.4",
   "org.scalameta" %% "munit" % "0.7.26" % Test
 )
+libraryDependencies += "org.plotly-scala" %% "plotly-render" % "0.8.1"

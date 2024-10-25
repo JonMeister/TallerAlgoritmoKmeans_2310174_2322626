@@ -9,7 +9,7 @@ package object kmedianas2D{
   import scala.util.Random
   import common.{task,parallel}
 
-  class Punto(val x: Double, val y: Double) {
+  case class Punto(val x: Double, val y: Double) {
     private def cuadrado(v: Double): Double = v * v
 
     def distanciaAlCuadrado(that: Punto): Double = cuadrado(that.x - x) + cuadrado(that.y - y)
@@ -62,7 +62,7 @@ package object kmedianas2D{
   def clasificarSeq(puntos : Seq[Punto], medianas : Seq[Punto]) : Map[Punto, Seq[Punto]] = {
 
     val matchPuntos = puntos.groupBy(x => hallarPuntoMasCercano(x,medianas))
-    print(matchPuntos)
+    //print(matchPuntos)
     matchPuntos
   }
 
@@ -92,7 +92,6 @@ package object kmedianas2D{
        mv <- medianasViejas
 
      } yield calculePromedioSeq(mv, clasif(mv))
-
      retorno
    }
 
@@ -105,17 +104,16 @@ package object kmedianas2D{
 
   def actualizarPar(clasif : Map[Punto, Seq[Punto]], medianasViejas : Seq[Punto]) : Seq[Punto] = {
 
-    val medianasviejasPar = medianasViejas.par
-
     val retorno = for{
 
-      mv <- medianasviejasPar
+      mv <- medianasViejas
 
     } yield calculePromedioPar(mv,clasif(mv))
 
-    retorno.seq
+    retorno
   }
 
+  // Esta lo dejo así, puesto que describe un proceso iterativo
   def hayConvergenciaSeq(eta : Double, medianasViejas : Seq[Punto], medianasNuevas : Seq[Punto]) : Boolean = {
 
     def iterative(pos : Int): Boolean = {
@@ -197,7 +195,7 @@ package object kmedianas2D{
   final def kMedianasPar(puntos: Seq[Punto], medianas: Seq[Punto], eta: Double): Seq[Punto] = {
 
     // Modificar valor del umbral en clasificarPar -> preguntar al profesor sobre esto
-    val clasificacion: Map[Punto, Seq[Punto]] = clasificarPar(10)(puntos, medianas)
+    val clasificacion: Map[Punto, Seq[Punto]] = clasificarPar(2)(puntos, medianas)
 
     val medianasNuevas: Seq[Punto] = actualizarPar(clasificacion, medianas)
 

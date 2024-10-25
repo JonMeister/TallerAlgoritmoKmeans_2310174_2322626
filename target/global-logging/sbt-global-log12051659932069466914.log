@@ -1,0 +1,8 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(consle, Some(8e208593-2fa4-4f8e-82b2-5b68739ebcae), Some(CommandSource(console0)))[0m
+[0m[[0m[31merror[0m] [0m[0mNot a valid command: consle (similar: set, client, new)[0m
+[0m[[0m[31merror[0m] [0m[0mNot a valid project ID: consle[0m
+[0m[[0m[31merror[0m] [0m[0mExpected ':'[0m
+[0m[[0m[31merror[0m] [0m[0mNot a valid key: consle (similar: console, consoleQuick, compile)[0m
+[0m[[0m[31merror[0m] [0m[0mconsle[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
