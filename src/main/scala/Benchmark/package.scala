@@ -1,7 +1,4 @@
 package object Benchmark {
-  import scala.concurrent.{Future, Await}
-  import scala.concurrent.duration._
-  import scala.concurrent.ExecutionContext.Implicits.global
   import kmedianas2D._
   import org.scalameter._
   import plotly._, element._, layout._
@@ -20,19 +17,17 @@ package object Benchmark {
     timeA1
   }
 
-  def tiemposKmedianas(numPuntos:Int, k:Int, eta:Double) = {
-    val puntos = generarPuntos(k, numPuntos)
+  def tiemposKmedianas(puntos:Seq[Punto], k:Int, eta:Double) = {
+
     val medianas = inicializarMedianas(k, puntos)
     val tiempoSeq = tiempoDe(kMedianasSeq(puntos, medianas, eta))
-    //    val tiempoPar = tiempoDe(kMedianasPar(puntos, medianas, eta))
-    //    (tiempoSeq,tiempoPar, tiempoSeq.value / tiempoPar.value)
-    (tiempoSeq)
-
+    val tiempoPar = tiempoDe(kMedianasPar(puntos, medianas, eta))
+    (tiempoSeq,tiempoPar, tiempoSeq.value / tiempoPar.value)
   }
 
-  def probarKmedianas(numPuntos:Int, k:Int, eta:Double) = {
+  def probarKmedianas(puntos:Seq[Punto], k:Int, eta:Double) = {
     // Probar lo secuencial
-    val puntosSeq = generarPuntos(k, numPuntos)
+    val puntosSeq = puntos
     val medianasSeq = inicializarMedianas(k, puntosSeq)
     val medianasSeqfin = kMedianasSeq(puntosSeq, medianasSeq, eta)
     val clasifFinalSeq = clasificarSeq(puntosSeq,medianasSeqfin)
@@ -82,75 +77,64 @@ package object Benchmark {
 
     val layoutSeq = Layout().withTitle("Plotting de puntos al azar y medianas iniciales y finales - Versión Secuencial")
 
-    def plotGrafico1(dataSeq: Seq[Trace], layoutSeq: Layout): Future[Unit]= Future{
-      Plotly.plot("kmedianasSeq.html", dataSeq, layoutSeq)
-    }
+
+    Plotly.plot("kmedianasSeq.html", dataSeq, layoutSeq)
+
+    // Probar lo paralelo
+    val puntosPar = puntos
+    val medianasPar = medianasSeq
+    val medianasParfin = kMedianasPar(puntosPar, medianasPar, eta)
+    val clasifFinalPar = clasificarPar(umbral(puntosPar.length))(puntosPar,medianasParfin)
+    val tiempoPar = tiempoDe(kMedianasPar(puntosPar, medianasPar, eta))
+
+    // Hacer gráfica de los resultados del proceso paralelo
+    val trazosPar = for {
+      (p,ppar) <- clasifFinalPar
+      ejeXpar = for {
+        pto <- ppar
+      } yield pto.x
+      ejeYpar = for {
+        pto <- ppar
+      } yield pto.y
+    } yield Scatter(
+      ejeXpar.toSeq,
+      ejeYpar.toSeq
+    ).withMode(ScatterMode(ScatterMode.Markers)).withName(s"Puntos: $p.x" ++ s"$p.y")
+
+    val ejeXMedianasPar = for {
+      p <- medianasPar
+    } yield p.x
+
+    val ejeYMedianasPar = for {
+      p <- medianasPar
+    } yield p.y
+
+    val ejeXMedianasFinPar = for {
+      p <- medianasParfin
+    } yield p.x
+
+    val ejeYMedianasFinPar = for {
+      p <- medianasParfin
+    } yield p.y
+
+    val trazo2Par= Scatter(
+      ejeXMedianasPar,
+      ejeYMedianasPar
+    ).withMode(ScatterMode(ScatterMode.Markers)).withName("Medianas")
+
+    val trazo3Par= Scatter(
+      ejeXMedianasFinPar,
+      ejeYMedianasFinPar
+    ).withMode(ScatterMode(ScatterMode.Markers)).withName("Medianas Finales")
+
+    val dataPar = (trazo2Par +:  (trazo3Par +: trazosPar.toSeq))
+
+    val layoutPar = Layout().withTitle("Plotting de puntos al azar y medianas iniciales y finales - Versión Paralela")
 
 
-
-
-
-      // Probar lo paralelo
-      val puntosPar = puntosSeq
-      val medianasPar = medianasSeq
-      val medianasParfin = kMedianasPar(puntosPar, medianasPar, eta)
-      val clasifFinalPar = clasificarPar(umbral(puntosPar.length))(puntosPar,medianasParfin)
-      val tiempoPar = tiempoDe(kMedianasPar(puntosPar, medianasPar, eta))
-
-      // Hacer gráfica de los resultados del proceso paralelo
-      val trazosPar = for {
-        (p,ppar) <- clasifFinalPar
-        ejeXpar = for {
-          pto <- ppar
-        } yield pto.x
-        ejeYpar = for {
-          pto <- ppar
-        } yield pto.y
-      } yield Scatter(
-        ejeXpar.toSeq,
-        ejeYpar.toSeq
-      ).withMode(ScatterMode(ScatterMode.Markers)).withName(s"Puntos: $p.x" ++ s"$p.y")
-
-      val ejeXMedianasPar = for {
-        p <- medianasPar
-      } yield p.x
-
-      val ejeYMedianasPar = for {
-        p <- medianasPar
-      } yield p.y
-
-      val ejeXMedianasFinPar = for {
-        p <- medianasParfin
-      } yield p.x
-
-      val ejeYMedianasFinPar = for {
-        p <- medianasParfin
-      } yield p.y
-
-      val trazo2Par= Scatter(
-        ejeXMedianasPar,
-        ejeYMedianasPar
-      ).withMode(ScatterMode(ScatterMode.Markers)).withName("Medianas")
-
-      val trazo3Par= Scatter(
-        ejeXMedianasFinPar,
-        ejeYMedianasFinPar
-      ).withMode(ScatterMode(ScatterMode.Markers)).withName("Medianas Finales")
-
-      val dataPar = (trazo2Par +:  (trazo3Par +: trazosPar.toSeq))
-
-      val layoutPar = Layout().withTitle("Plotting de puntos al azar y medianas iniciales y finales - Versión Paralela")
-
-    def plotGrafico2(dataPar: Seq[Trace], layoutPar: Layout): Future[Unit]= Future{
-      Plotly.plot("kmedianasPar.html", dataPar, layoutPar)
-    }
-    val future1=plotGrafico1(dataSeq,layoutSeq)
-    println("Se imprimieron los resultados secuenciales, revise archivo .html")
-    val future2=plotGrafico2(dataPar.toSeq,layoutPar)
-    println("Se imprimieron los resultados paralelos, revise archivo .html")
-
+    Plotly.plot("kmedianasPar.html", dataPar.toSeq, layoutPar)
     (tiempoSeq, tiempoPar, tiempoSeq.value/tiempoPar.value)
-    }
+  }
 }
 
 //  (medianasSeq, medianasSeqfin, clasifFinalSeq, tiempoSeq, tiempoSeq.value)

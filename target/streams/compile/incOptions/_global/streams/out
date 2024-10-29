@@ -1,2 +1,14 @@
 [debug] Created transactional ClassFileManager with tempDir = C:\Users\jonat\OneDrive\OTRODRIVE\Documents\Universidad\4_SEMESTRE IV_IT\FPFC\Talleres\Taller_5\TallerAlgoritmoKmeans_2310174_2322626\target\scala-2.13\classes.bak
+[debug] About to delete class files:
+[debug] 	package$.class
+[debug] 	package$Punto.class
+[debug] 	package.class
+[debug] We backup class files:
+[debug] 	package$.class
+[debug] 	package$Punto.class
+[debug] 	package.class
+[debug] Registering generated classes:
+[debug] 	package$Punto.class
+[debug] 	package.class
+[debug] 	package$.class
 [debug] Removing the temporary directory used for backing up class files: C:\Users\jonat\OneDrive\OTRODRIVE\Documents\Universidad\4_SEMESTRE IV_IT\FPFC\Talleres\Taller_5\TallerAlgoritmoKmeans_2310174_2322626\target\scala-2.13\classes.bak
