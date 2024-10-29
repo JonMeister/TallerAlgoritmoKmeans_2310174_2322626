@@ -21,8 +21,8 @@ package object kmedianas2D{
   }
 
   def generarPuntos(k: Int, num: Int): Seq[Punto] = {
-    val randx = new Random
-    val randy = new Random
+    val randx = new Random(1)
+    val randy = new Random(2)
     (0 until num).map { i =>
       val x = ((i + 1) % k) * 1.0 / k + randx.nextDouble() * 0.5
       val y = ((i + 5) % k) * 1.0 / k + randy.nextDouble() * 0.5
@@ -31,8 +31,14 @@ package object kmedianas2D{
   }
 
   def inicializarMedianas(k: Int, puntos: Seq[Punto]): Seq[Punto] = {
-    val rand = new Random
+    val rand = new Random(7)
     (0 until k).map(_ => puntos(rand.nextInt(puntos.length)))
+  }
+
+  //Umbral
+  def umbral(npuntos: Int): Int = {
+    // Si npuntos= 2^n, entonces el umbral será 2^(n/2)
+    math.pow(2, ((math.log(npuntos) / math.log(2)) / 2).toInt).toInt
   }
 
   // Clasificar puntos
@@ -103,17 +109,25 @@ package object kmedianas2D{
     }
   }
 
-  def clasificarPar(umb: Int)(puntos : Seq[Punto], medianas : Seq[Punto]) : Map[Punto, Seq[Punto]] = {
-
-    if(umb == 0){
-      clasificarSeq(puntos,medianas)
-    }else {
-      val middle : Int = (puntos.length + 1) / 2
-      val (part1,part2) = parallel(clasificarPar(umb-1)(puntos.slice(0,middle),medianas)
-        ,clasificarPar(umb-1)(puntos.slice(middle,puntos.length),medianas))
-      part1 ++ part2.map{case (key,value) => key -> (part1.getOrElse(key,List()) ++ value) }
+  def clasificarPar(umb: Int)(puntos: Seq[Punto], medianas: Seq[Punto]): Map[Punto, Seq[Punto]] = {
+    if (puntos.length <= umb) {
+      clasificarSeq(puntos, medianas)
+    } else {
+      val middle: Int = puntos.length / 2
+      val (part1, part2) = parallel(
+        clasificarPar(umb)(puntos.slice(0, middle), medianas),
+        clasificarPar(umb)(puntos.slice(middle, puntos.length), medianas)
+      )
+      mergeMaps(part1, part2)
     }
   }
+
+  def mergeMaps(map1: Map[Punto, Seq[Punto]], map2: Map[Punto, Seq[Punto]]): Map[Punto, Seq[Punto]] = {
+    (map1.keySet ++ map2.keySet).map { key =>
+      key -> (map1.getOrElse(key, Seq()) ++ map2.getOrElse(key, Seq()))
+    }.toMap
+  }
+
 
   def actualizarPar(clasif: Map[Punto, Seq[Punto]], medianasViejas: Seq[Punto]): Seq[Punto] = {
     val retorno = for {
@@ -134,7 +148,7 @@ package object kmedianas2D{
     // Versión usando task, esto hace que para cada punto de cada secuencia de medianas genere una
     // linea de procesamiento, luego comprueba con el forall si todos los resultados dieron true
     // esto es equivalente a que todas los puntos convergen, luego el resultado es que las medianas
-    // convergen, sino divergen
+    // convergen, si no divergen
     def taskVersion : Boolean = {
 
       val forks : IndexedSeq[ForkJoinTask[Boolean]] = (for{
@@ -153,8 +167,7 @@ package object kmedianas2D{
   @tailrec
   final def kMedianasPar(puntos: Seq[Punto], medianas: Seq[Punto], eta: Double): Seq[Punto] = {
 
-    // Modificar valor del umbral en clasificarPar -> preguntar al profesor sobre esto
-    val clasificacion: Map[Punto, Seq[Punto]] = clasificarPar(2)(puntos, medianas)
+    val clasificacion: Map[Punto, Seq[Punto]] = clasificarPar(umbral(puntos.length))(puntos, medianas)
 
     val medianasNuevas: Seq[Punto] = actualizarPar(clasificacion, medianas)
 
