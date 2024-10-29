@@ -1,8 +1,7 @@
-
-import java.util.concurrent._
-import scala.util.DynamicVariable
-
 package object common {
+
+  import java.util.concurrent._
+  import scala.util.DynamicVariable
 
   val forkJoinPool = new ForkJoinPool
 

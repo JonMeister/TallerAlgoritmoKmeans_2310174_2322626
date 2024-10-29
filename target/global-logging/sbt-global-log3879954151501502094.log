@@ -1,0 +1,11 @@
+[debug] > Exec(console, None, None)
+[debug] Evaluating tasks: Compile / console
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 3 Scala sources to C:\Users\jonat\OneDrive\OTRODRIVE\Documents\Universidad\4_SEMESTRE IV_IT\FPFC\Talleres\Taller_5\TallerAlgoritmoKmeans_2310174_2322626\target\scala-2.13\classes ...
+[error] C:\Users\jonat\OneDrive\OTRODRIVE\Documents\Universidad\4_SEMESTRE IV_IT\FPFC\Talleres\Taller_5\TallerAlgoritmoKmeans_2310174_2322626\src\main\scala\Benchmark\package.scala:94:42: not found: value umbral
+[error]       val clasifFinalPar = clasificarPar(umbral(puntosPar.length))(puntosPar,medianasParfin)
+[error]                                          ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[error] Total time: 3 s, completed 28 Oct 2024, 02:45:05
+[debug] > Exec(idea-shell, None, None)

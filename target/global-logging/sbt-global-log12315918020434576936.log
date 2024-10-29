@@ -1,0 +1,11 @@
+[debug] > Exec(probarKmedianas(16,3,0.01), None, None)
+[error] Expected ID character
+[error] Not a valid command: probarKmedianas
+[error] Expected project ID
+[error] Expected configuration
+[error] Expected ':'
+[error] Expected key
+[error] Not a valid key: probarKmedianas
+[error] probarKmedianas(16,3,0.01)
+[error]                ^
+[debug] > Exec(idea-shell, None, None)

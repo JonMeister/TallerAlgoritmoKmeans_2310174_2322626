@@ -1,0 +1,86 @@
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.10.3 (Oracle Corporation Java 23)
+[debug] Load.defaultLoad until apply took 6.7897ms
+[debug]           Load.loadUnit: plugins took 55.2187ms
+[debug]           Load.loadUnit: defsScala took 0.0031ms
+[debug] [Loading] Scanning directory C:\Users\jonat\OneDrive\OTRODRIVE\Documents\Universidad\4_SEMESTRE IV_IT\FPFC\Talleres\Taller_5\TallerAlgoritmoKmeans_2310174_2322626\project
+[debug]             Load.loadUnit: mkEval took 0.3614ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\Users\jonat\OneDrive\OTRODRIVE\Documents\Universidad\4_SEMESTRE IV_IT\FPFC\Talleres\Taller_5\TallerAlgoritmoKmeans_2310174_2322626\project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 1.1711 ms
+[info] loading settings for project talleralgoritmokmeans_2310174_2322626-build from idea11.sbt ...
+[debug]               Load.resolveProject(talleralgoritmokmeans_2310174_2322626-build) took 1.3098ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id talleralgoritmokmeans_2310174_2322626-build, base: C:\Users\jonat\OneDrive\OTRODRIVE\Documents\Universidad\4_SEMESTRE IV_IT\FPFC\Talleres\Taller_5\TallerAlgoritmoKmeans_2310174_2322626\project, plugins: List(<none>))) took 2.8105ms
+[debug] [Loading] Done in C:\Users\jonat\OneDrive\OTRODRIVE\Documents\Universidad\4_SEMESTRE IV_IT\FPFC\Talleres\Taller_5\TallerAlgoritmoKmeans_2310174_2322626\project, returning: (talleralgoritmokmeans_2310174_2322626-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 41.2971ms
+[debug]           Load.loadUnit: cleanEvalClasses took 5.2794ms
+[debug]         Load.loadUnit(file:/C:/Users/jonat/OneDrive/OTRODRIVE/Documents/Universidad/4_SEMESTRE%20IV_IT/FPFC/Talleres/Taller_5/TallerAlgoritmoKmeans_2310174_2322626/project/, ...) took 103.9311ms
+[debug]       Load.apply: load took 106.072ms
+[debug]       Load.apply: resolveProjects took 0.0882ms
+[debug]       Load.apply: finalTransforms took 6.2002ms
+[debug]       Load.apply: config.delegates took 0.2124ms
+[debug]       Load.apply: Def.make(settings)... took 34.6038ms
+[debug]       Load.apply: structureIndex took 12.1687ms
+[debug]       Load.apply: mkStreams took 0.0026ms
+[info] loading project definition from C:\Users\jonat\OneDrive\OTRODRIVE\Documents\Universidad\4_SEMESTRE IV_IT\FPFC\Talleres\Taller_5\TallerAlgoritmoKmeans_2310174_2322626\project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug]     Load.loadUnit: plugins took 351.3847ms
+[debug]     Load.loadUnit: defsScala took 0.0026ms
+[debug] [Loading] Scanning directory C:\Users\jonat\OneDrive\OTRODRIVE\Documents\Universidad\4_SEMESTRE IV_IT\FPFC\Talleres\Taller_5\TallerAlgoritmoKmeans_2310174_2322626
+[debug]       Load.loadUnit: mkEval took 0.2787ms
+[debug] [Loading] Found root project root w/ remaining 
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(org.jetbrains.sbt.StructurePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(org.jetbrains.sbt.IdeaShellPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(org.jetbrains.sbt.indices.SbtIntellijIndicesPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(org.jetbrains.sbt.StructurePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(org.jetbrains.sbt.IdeaShellPlugin)))
+[debug] Clause(And(Set(Atom(sbt.plugins.CorePlugin), Atom(sbt.plugins.JvmPlugin))),Set(Atom(org.jetbrains.sbt.indices.SbtIntellijIndicesPlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.SemanticdbPlugin,org.jetbrains.sbt.indices.SbtIntellijIndicesPlugin,sbt.plugins.JUnitXmlReportPlugin,org.jetbrains.sbt.IdeaShellPlugin,org.jetbrains.sbt.StructurePlugin,sbt.plugins.MiniDependencyTreePlugin)
+[debug] Plugins.deducer#function took 1.7636 ms
+[info] loading settings for project root from build.sbt ...
+[debug]         Load.resolveProject(root) took 26.6936ms
+[debug]       Load.loadTransitive: finalizeProject(Project(id root, base: C:\Users\jonat\OneDrive\OTRODRIVE\Documents\Universidad\4_SEMESTRE IV_IT\FPFC\Talleres\Taller_5\TallerAlgoritmoKmeans_2310174_2322626, plugins: List(<none>))) took 28.9443ms
+[debug] [Loading] Done in C:\Users\jonat\OneDrive\OTRODRIVE\Documents\Universidad\4_SEMESTRE IV_IT\FPFC\Talleres\Taller_5\TallerAlgoritmoKmeans_2310174_2322626, returning: (root)
+[debug]     Load.loadUnit: loadedProjectsRaw took 101.0479ms
+[debug]     Load.loadUnit: cleanEvalClasses took 34.7687ms
+[debug]   Load.loadUnit(file:/C:/Users/jonat/OneDrive/OTRODRIVE/Documents/Universidad/4_SEMESTRE%20IV_IT/FPFC/Talleres/Taller_5/TallerAlgoritmoKmeans_2310174_2322626/, ...) took 489.7553ms
+[debug] Load.apply: load took 492.2302ms
+[debug] Load.apply: resolveProjects took 0.0839ms
+[debug] Load.apply: finalTransforms took 16.0345ms
+[debug] Load.apply: config.delegates took 0.2431ms
+[debug] Load.apply: Def.make(settings)... took 55.1407ms
+[debug] Load.apply: structureIndex took 23.4021ms
+[debug] Load.apply: mkStreams took 0.0051ms
+[warn] Discarding 1 session setting.  Use 'session save' to persist session settings.
+[info] set current project to ParallelScala (in build file:/C:/Users/jonat/OneDrive/OTRODRIVE/Documents/Universidad/4_SEMESTRE%20IV_IT/FPFC/Talleres/Taller_5/TallerAlgoritmoKmeans_2310174_2322626/)
+[debug] > Exec(sbtPopOnFailure, None, None)
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(idea-shell, None, None)

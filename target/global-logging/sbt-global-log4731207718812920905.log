@@ -1,0 +1,11 @@
+[debug] > Exec(console, None, None)
+[debug] Evaluating tasks: Compile / console
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 3 Scala sources to C:\Users\jonat\OneDrive\OTRODRIVE\Documents\Universidad\4_SEMESTRE IV_IT\FPFC\Talleres\Taller_5\TallerAlgoritmoKmeans_2310174_2322626\target\scala-2.13\classes ...
+[info] done compiling
+[info] Starting scala interpreter...
+[warn] Canceling execution...
+[error] Cancelled: console
+[error] Cancelled: console
+[error] Use 'last' for the full log.
+[debug] > Exec(idea-shell, None, None)
