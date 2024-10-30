@@ -1,0 +1,35 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /home/jonmeister/1_SemesterIV/FPFC/Taller_5/TallerAlgoritmoKmeans_2310174_2322626/target/scala-2.13/parallelscala_2.13-0.1.0-SNAPSHOT.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Benchmark[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/jonmeister/1_SemesterIV/FPFC/Taller_5/TallerAlgoritmoKmeans_2310174_2322626/target/scala-2.13/classes/Benchmark[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Benchmark/package.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/jonmeister/1_SemesterIV/FPFC/Taller_5/TallerAlgoritmoKmeans_2310174_2322626/target/scala-2.13/classes/Benchmark/package.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Benchmark/package$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/jonmeister/1_SemesterIV/FPFC/Taller_5/TallerAlgoritmoKmeans_2310174_2322626/target/scala-2.13/classes/Benchmark/package$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	common[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/jonmeister/1_SemesterIV/FPFC/Taller_5/TallerAlgoritmoKmeans_2310174_2322626/target/scala-2.13/classes/common[0m
+[0m[[0m[0mdebug[0m] [0m[0m	common/package.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/jonmeister/1_SemesterIV/FPFC/Taller_5/TallerAlgoritmoKmeans_2310174_2322626/target/scala-2.13/classes/common/package.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	common/package$DefaultTaskScheduler$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/jonmeister/1_SemesterIV/FPFC/Taller_5/TallerAlgoritmoKmeans_2310174_2322626/target/scala-2.13/classes/common/package$DefaultTaskScheduler$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	common/package$DefaultTaskScheduler.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/jonmeister/1_SemesterIV/FPFC/Taller_5/TallerAlgoritmoKmeans_2310174_2322626/target/scala-2.13/classes/common/package$DefaultTaskScheduler.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	common/package$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/jonmeister/1_SemesterIV/FPFC/Taller_5/TallerAlgoritmoKmeans_2310174_2322626/target/scala-2.13/classes/common/package$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	common/package$TaskScheduler.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/jonmeister/1_SemesterIV/FPFC/Taller_5/TallerAlgoritmoKmeans_2310174_2322626/target/scala-2.13/classes/common/package$TaskScheduler.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	EjecucionKMedianas$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/jonmeister/1_SemesterIV/FPFC/Taller_5/TallerAlgoritmoKmeans_2310174_2322626/target/scala-2.13/classes/EjecucionKMedianas$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	EjecucionKMedianas.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/jonmeister/1_SemesterIV/FPFC/Taller_5/TallerAlgoritmoKmeans_2310174_2322626/target/scala-2.13/classes/EjecucionKMedianas.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	EjecucionKMedianas$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/jonmeister/1_SemesterIV/FPFC/Taller_5/TallerAlgoritmoKmeans_2310174_2322626/target/scala-2.13/classes/EjecucionKMedianas$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	kmedianas2D[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/jonmeister/1_SemesterIV/FPFC/Taller_5/TallerAlgoritmoKmeans_2310174_2322626/target/scala-2.13/classes/kmedianas2D[0m
+[0m[[0m[0mdebug[0m] [0m[0m	kmedianas2D/package.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/jonmeister/1_SemesterIV/FPFC/Taller_5/TallerAlgoritmoKmeans_2310174_2322626/target/scala-2.13/classes/kmedianas2D/package.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	kmedianas2D/package$Punto.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/jonmeister/1_SemesterIV/FPFC/Taller_5/TallerAlgoritmoKmeans_2310174_2322626/target/scala-2.13/classes/kmedianas2D/package$Punto.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	kmedianas2D/package$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/jonmeister/1_SemesterIV/FPFC/Taller_5/TallerAlgoritmoKmeans_2310174_2322626/target/scala-2.13/classes/kmedianas2D/package$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m

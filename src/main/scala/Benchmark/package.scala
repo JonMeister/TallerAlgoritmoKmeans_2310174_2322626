@@ -17,17 +17,17 @@ package object Benchmark {
     timeA1
   }
 
-  def tiemposKmedianas(numPuntos:Int, k:Int, eta:Double) = {
-    val puntos = generarPuntos(k, numPuntos)
+  def tiemposKmedianas(puntos:Seq[Punto], k:Int, eta:Double) = {
+
     val medianas = inicializarMedianas(k, puntos)
     val tiempoSeq = tiempoDe(kMedianasSeq(puntos, medianas, eta))
     val tiempoPar = tiempoDe(kMedianasPar(puntos, medianas, eta))
     (tiempoSeq,tiempoPar, tiempoSeq.value / tiempoPar.value)
   }
 
-  def probarKmedianas(numPuntos:Int, k:Int, eta:Double) = {
+  def probarKmedianas(puntos:Seq[Punto], k:Int, eta:Double) = {
     // Probar lo secuencial
-    val puntosSeq = generarPuntos(k, numPuntos)
+    val puntosSeq = puntos
     val medianasSeq = inicializarMedianas(k, puntosSeq)
     val medianasSeqfin = kMedianasSeq(puntosSeq, medianasSeq, eta)
     val clasifFinalSeq = clasificarSeq(puntosSeq,medianasSeqfin)
@@ -81,7 +81,7 @@ package object Benchmark {
     Plotly.plot("kmedianasSeq.html", dataSeq, layoutSeq)
 
     // Probar lo paralelo
-    val puntosPar = puntosSeq
+    val puntosPar = puntos
     val medianasPar = medianasSeq
     val medianasParfin = kMedianasPar(puntosPar, medianasPar, eta)
     val clasifFinalPar = clasificarPar(umbral(puntosPar.length))(puntosPar,medianasParfin)

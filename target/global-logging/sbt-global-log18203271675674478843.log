@@ -1,0 +1,5 @@
+[debug] > Exec(scala:, None, None)
+[error] Expected key
+[error] scala:
+[error]       ^
+[debug] > Exec(idea-shell, None, None)

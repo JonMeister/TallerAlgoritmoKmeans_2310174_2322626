@@ -1,7 +1,3 @@
 [0m[[0m[0mdebug[0m] [0m[0mnot up to date. inChanged = true, force = false[0m
-[0m[[0m[0mdebug[0m] [0m[0mUpdating ProjectRef(uri("file:/mnt/c/Users/jcesc/IdeaProjects/ParallelScala/project/"), "parallelscala-build")...[0m
-[0m[[0m[0minfo[0m] [0m[0mUpdating parallelscala-build[0m
-[0m[[0m[0minfo[0m] [0m[0mResolved parallelscala-build dependencies[0m
-[0m[[0m[0minfo[0m] [0m[0mFetching artifacts of parallelscala-build[0m
-[0m[[0m[0minfo[0m] [0m[0mFetched artifacts of parallelscala-build[0m
-[0m[[0m[0mdebug[0m] [0m[0mDone updating ProjectRef(uri("file:/mnt/c/Users/jcesc/IdeaProjects/ParallelScala/project/"), "parallelscala-build")[0m
+[0m[[0m[0mdebug[0m] [0m[0mUpdating ProjectRef(uri("file:/home/jonmeister/1_SemesterIV/FPFC/Taller_5/TallerAlgoritmoKmeans_2310174_2322626/project/"), "talleralgoritmokmeans_2310174_2322626-build")...[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone updating ProjectRef(uri("file:/home/jonmeister/1_SemesterIV/FPFC/Taller_5/TallerAlgoritmoKmeans_2310174_2322626/project/"), "talleralgoritmokmeans_2310174_2322626-build")[0m
