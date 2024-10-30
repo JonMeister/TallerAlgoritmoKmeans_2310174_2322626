@@ -21,8 +21,8 @@ package object kmedianas2D{
   }
 
   def generarPuntos(k: Int, num: Int): Seq[Punto] = {
-    val randx = new Random(1)
-    val randy = new Random(2)
+    val randx = new Random
+    val randy = new Random
     (0 until num).map { i =>
       val x = ((i + 1) % k) * 1.0 / k + randx.nextDouble() * 0.5
       val y = ((i + 5) % k) * 1.0 / k + randy.nextDouble() * 0.5
@@ -31,7 +31,7 @@ package object kmedianas2D{
   }
 
   def inicializarMedianas(k: Int, puntos: Seq[Punto]): Seq[Punto] = {
-    val rand = new Random(7)
+    val rand = new Random
     (0 until k).map(_ => puntos(rand.nextInt(puntos.length)))
   }
 
